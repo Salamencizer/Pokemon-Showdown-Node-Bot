@@ -48,7 +48,7 @@ exports.autoReloginDelay = 60 * 1000;
 * Rooms to join
 */
 
-exports.rooms = ['lobby'];
+exports.rooms = ['lobby','wifi','tournaments','othermetas'];
 /*
 * exports.rooms = 'all'; //For joining all rooms
 * exports.rooms = 'official'; //For joining official rooms
@@ -104,9 +104,9 @@ exports.permissionExceptions = {
 	'games': '#'
 };
 
-exports.botguide = "https://github.com/Salamencizer/Abyssal-Bot/blob/master/commands/README.md";
+exports.botguide = "https://github.com/Spandan7/Pokemon-Showdown-Node-Bot/blob/master/commands/README.md";
 
-exports.pmhelp = "Hola mano! I'm a bot. Do .help for a command list. Have a nice day!!"; //When you pm the bot but don't use a command, it replies you this message. Example: "Hi, I'm a bot. Use .help to view a command guide"
+exports.pmhelp = "Hey there!! I'm a bot. Please Pm a Staff Member, or use .help for commands help. Have a nice day!"; //When you pm the bot but don't use a command, it replies you this message. Example: "Hi, I'm a bot. Use .help to view a command guide"
 
 /*
 * Language configuration
