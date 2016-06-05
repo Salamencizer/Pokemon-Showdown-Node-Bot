@@ -38,9 +38,9 @@ exports.watchconfig = true;
 * Login Details
 */
 
-exports.nick = '';
+exports.nick = 'Rotom the Pokedex';
 
-exports.pass = '';
+exports.pass = 'ohkaydude!';
 
 exports.autoReloginDelay = 60 * 1000;
 
@@ -104,9 +104,9 @@ exports.permissionExceptions = {
 	'games': '#'
 };
 
-exports.botguide = "https://github.com/Spandan7/Pokemon-Showdown-Node-Bot/blob/master/commands/README.md";
+exports.botguide = "https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot/blob/master/commands/README.md";
 
-exports.pmhelp = "Hey there!! I'm a bot. Please Pm a Staff Member, or use .help for commands help. Have a nice day!"; //When you pm the bot but don't use a command, it replies you this message. Example: "Hi, I'm a bot. Use .help to view a command guide"
+exports.pmhelp = "Hey there!! I'm a bot. Please PM a Staff Member, or use .help for commands help. Have a nice day!"; //When you pm the bot but don't use a command, it replies you this message. Example: "Hi, I'm a bot. Use .help to view a command guide"
 
 /*
 * Language configuration
