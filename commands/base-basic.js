@@ -8,7 +8,7 @@ exports.commands = {
 	credits: 'about',
 	bot: 'about',
 	about: function () {
-		this.restrictReply(this.trad('about') + ". " + this.trad('author') + ": " + Settings.package.author.name + ". (" + Settings.package.homepage + ")", 'info');
+		this.restrictReply("I'm a **Pokemon Showdown Bot** written in JavaScript for Node, modified by **Spandan**. Author: Ecuacion. (https://github.com/Spandan/Pokemon-Showdown-Node-Bot)");
 	},
 
 	git: 'github',
