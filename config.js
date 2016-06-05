@@ -1,4 +1,4 @@
-﻿/*
+/*
 	config.js - Configuration File
 */
 
@@ -7,15 +7,15 @@
 *
 * NOTE: Do NOT use "[server].psim.us", that is the client url
 * If you don't know what are the server, port or serverid values
-* run 'node getserver.js' to get them
+* run 'node serverconfig.js' to get them
 *
 */
 
-exports.server = 'localhost';
+exports.server = 'showdownsubserver-austin0602.c9users.io';
 
-exports.port = 8000;
+exports.port = 80;
 
-exports.serverid = 'localhost';
+exports.serverid = 'showdownsubserver-austin0602.c9users.io:80';
 
 exports.autoReconnectDelay = 10 * 1000;
 exports.connectionTimeout = 2 * 60 * 1000;
@@ -29,12 +29,6 @@ exports.connectionTimeout = 2 * 60 * 1000;
 exports.crashguard = true;
 
 /*
-* Security log
-*/
-
-exports.securityLog = {ageOfLogs: 7};
-
-/*
 * Watch Config
 */
 
@@ -44,9 +38,9 @@ exports.watchconfig = true;
 * Login Details
 */
 
-exports.nick = '';
+exports.nick = 'Rotom The Pokedex';
 
-exports.pass = '';
+exports.pass = 'ohkaydude!';
 
 exports.autoReloginDelay = 60 * 1000;
 
@@ -55,7 +49,6 @@ exports.autoReloginDelay = 60 * 1000;
 */
 
 exports.rooms = ['lobby'];
-
 /*
 * exports.rooms = 'all'; //For joining all rooms
 * exports.rooms = 'official'; //For joining official rooms
@@ -77,20 +70,7 @@ exports.initCmds = ['|/avatar 120']; // Other commands (avatar, blockchallenges,
 * Auth configuration
 */
 
-exports.exceptions = {
-	// 'userid': true
-};
-
-/*
-* 'userid': 'rank' or 'userid': true for full access
-* Example:
-*
-* exports.exceptions = {
-*	'ecuacion': true,
-*	'excepted': true
-* };
-*
-*/
+exports.exceptions = {spandan:true,ohkaydude:true};
 
 exports.ranks = ['+', '\u2605', '%', '@', '#', '&', '~'];
 
@@ -106,7 +86,7 @@ exports.globalPermissions = {
 * Commands configuration
 */
 
-exports.commandTokens = ['.']; //Array of valid command characters
+exports.commandTokens = [".","\\","h","H","g","G"]; //Array of valid command characters
 
 exports.defaultPermission = '%';
 
@@ -124,11 +104,9 @@ exports.permissionExceptions = {
 	'games': '#'
 };
 
-exports.botguide = "https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot/blob/master/commands/README.md";
+exports.botguide = "https://github.com/Salamencizer/Abyssal-Bot/blob/master/commands/README.md";
 
-//When you pm the bot but don't use a command, it replies you this message. Example: "Hi, I'm a bot. Use .help to view a command guide"
-//The var #USER is replaced with the username that pms it
-exports.pmhelp = "Hi #USER! I am a robot, please PM another staff member if you need help. Command guide: https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot/blob/master/commands/README.md";
+exports.pmhelp = "Hola mano! I'm a bot. Do .help for a command list. Have a nice day!!"; //When you pm the bot but don't use a command, it replies you this message. Example: "Hi, I'm a bot. Use .help to view a command guide"
 
 /*
 * Language configuration
@@ -162,6 +140,7 @@ exports.debug = {
 	sent: false
 };
 
+
 /*
 * Configuration for specific
 * commands and features
@@ -172,7 +151,7 @@ exports.debug = {
 */
 
 exports.moderation = {
-	modException: '%', // Min rank for not receive moderation
+	modException: '+', // Min rank for not receive moderation
 
 	allowmute: true,
 	disableModNote: false,
@@ -202,7 +181,7 @@ exports.moderation = {
 		'servers': 2,
 		'youtube': 2,
 		'spoiler': 2,
-		'replays': 1
+        'replays':0
 	},
 
 	modDefault: {
@@ -219,7 +198,6 @@ exports.moderation = {
 		'spoiler': 0,
 		'youtube': 0,
 		'psservers': 0,
-		'replays': 0,
 
 		//multiple infraction
 		'multiple': 1,
@@ -237,8 +215,7 @@ exports.moderation = {
 
 	psServersExcepts: {
 		"showdown": 1,
-		"smogtours": 1,
-		"sim": 1
+		"smogtours": 1
 	},
 
 	zeroToleranceDefaultLevel: 'h',
@@ -253,37 +230,26 @@ exports.moderation = {
 * Battles
 */
 
-exports.aceptAll = false;
+exports.aceptAll = true;
 
-exports.maxBattles = 1;
+exports.maxBattles = 6;
 
-exports.initBattleMsg = ['gl hf'];
+exports.winmsg = ['Good Game Dude', 'Don\'t worry. My team was too good.','The bot pinched your butt...'];
 
-exports.winmsg = ['GG', 'g_g'];
-
-exports.losemsg = ['gg', 'wp'];
+exports.losemsg = ['Dont get happy, I\'m just a bot.','Huh.'];
 
 exports.battleMessages = {
-	/* Examples of battle messages:
-	'crit': {
-		'self': ['lol that hax', 'stop haxing pls'],
-		'foe': ['sorry', 'wow sorry for that', 'get critted']
+	'tier': {
+		'self': ['Good Luck and Have Fun Dude!', 'The bot battle begins!','Warning: You shall expect excessive hax!']
 	},
-	'miss': {
-		'self': ['wow hax', 'lol #poke you\'re blind']
+	'-crit': {
+		'self':['AAAARGH! A CRIT!', 'WTF I hate crits'], //Example: ['lol that hax', 'stop haxing pls']
+		'foe':['Really sorry bout thatit cr', 'Yay! I got a crit!']
+	},
+	'-miss': {
+		'self':['Looks like i have pleased the haxgods', '#poke, you are as blind as Deino.']
 	}
-	*/
 };
-
-exports.battleModules = {
-	/* Algorithms for use in battles */
-	"challengecup1v1": "ingame-nostatus",
-	"1v1": "ingame-nostatus"
-};
-
-//exports.battleLog = {ageOfLogs: 1}; // Days
-
-exports.abandonedBattleAutojoin = true;
 
 exports.ladderCheckInterval = 10 * 1000;
 
@@ -303,6 +269,7 @@ exports.formatAliases = {
 	'dpp': '[Gen 4] OU',
 	'adv': '[Gen 3] OU',
 	'gsc': '[Gen 2] OU',
+	'bh' : 'Balanced Hackmons',
 	'rby': '[Gen 1] OU'
 };
 
@@ -318,18 +285,6 @@ exports.tourDefault = {
 	autodq: 1.5,
 	scoutProtect: false
 };
-
-exports.leaderboards = {};
-
-/* Leaderboard example:
-exports.leaderboards['tournaments'] = {
-	winnerPoints: 5,
-	finalistPoints: 3,
-	semiFinalistPoints: 1,
-	battlePoints: 0,
-	onlyOfficial: true // If true, only official tours (must use .official command) will be counted
-};
-*/
 
 /*
 * Youtube
@@ -399,6 +354,9 @@ exports.groupChatTryJoinInterval = 60 * 1000;
 exports.groupchats['groupchat-ecuacion-test'] = {
 	toJoin: ['/join groupchat-ecuacion-test'],
 	onJoin: ['Hi guys!'],
-	onLeave: []
+	onLeave: [],
+	roomAuth: {
+		'+': [/^.*$/]
+	}
 };
 */
