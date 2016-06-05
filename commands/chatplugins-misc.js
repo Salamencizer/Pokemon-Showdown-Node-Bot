@@ -22,10 +22,6 @@ exports.commands = {
         text+='Spandan\'s teams: http://pastebin.com/pR6cCsha ';
         this.say(room,text);
     },
-    
-
-    
-    
     'randmonoteam':function(arg,by,room)
     {
     	var types=["Fire","Ice","Rock","Grass","Fairy","Steel","Water","Normal","Fighting","Poison","Flying","Bug","Ground","Ghost","Dark","Dragon","Psychic","Electric","???"];
@@ -137,6 +133,18 @@ exports.commands = {
     },
     'ello':function(arg,by,room)
     {
+        var rebuild = function(zom)
+        {
+            var k="";
+  			for(var i=0;i<zom.length;i++)
+  			{
+  				if(zom.charAt(i)===' '||zom.charAt(i)==='-'||zom.charAt(i)==='.'||zom.charAt(i)==='/'||zom.charAt(i)==='+')
+  					continue;
+  				else 
+  					k=k+zom.charAt(i);
+  			}
+  			return k.toLowerCase();
+        }
         if(this.cmdToken=='h' || this.cmdToken=='H')
           {
         var text="";
@@ -149,15 +157,27 @@ exports.commands = {
         }
         else
         text+='Hello '+by;
-        if(arg === "Abyssal Bot"|| arg === "abyssal bot"||arg==="rotomthepokedex")
+        if(rebuild(arg) =="rotomthepokedex")
         this.say(room,text);
           }
     },
     'eya':function(arg,by,room)
     {
+        var rebuild = function(zom)
+        {
+            var k="";
+  			for(var i=0;i<zom.length;i++)
+  			{
+  				if(zom.charAt(i)===' '||zom.charAt(i)==='-'||zom.charAt(i)==='.'||zom.charAt(i)==='/'||zom.charAt(i)==='+')
+  					continue;
+  				else 
+  					k=k+zom.charAt(i);
+  			}
+  			return k.toLowerCase();
+        }
         if(this.cmdToken=='h' || this.cmdToken=='H')
           {
-        if(arg.toLowerCase()==="abyssal bot" || arg==="")
+        if(rebuild(arg)=="rotomthepokedex" || arg==="")
         {
         var text="";
         if(by.charAt(0)=='+' || by.charAt(0)=='%' || by.charAt(0)=='@' || by.charAt(0)=='#' || by.charAt(0)=='&' || by.charAt(0)=='~')
