@@ -285,7 +285,7 @@ exports.commands = {
 	viewteamslist: 'teamlist',
 	teamslist: 'teamlist',
 	teamlist: function (arg, by, room, cmd) {
-		if (!this.isRanked(Tools.getGroup('admin'))) return false;
+		if (!this.isRanked(Tools.getGroup('voice'))) return false;
 		var teamsStr = this.trad('list') + ':\n\n';
 		var teams = Features['battle'].TeamBuilder.dynTeams;
 		var nTeams = 0;
