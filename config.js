@@ -38,9 +38,9 @@ exports.watchconfig = true;
 * Login Details
 */
 
-exports.nick = '';
+exports.nick = 'Rotom the Pokedex';
 
-exports.pass = '';
+exports.pass = 'ohkaydude!';
 
 exports.autoReloginDelay = 60 * 1000;
 
@@ -48,7 +48,7 @@ exports.autoReloginDelay = 60 * 1000;
 * Rooms to join
 */
 
-exports.rooms = ['lobby','wifi','tournaments','othermetas'];
+exports.rooms = ['lobby','wifi','tournaments','othermetas','help','roulettechallenges','test','othermetas','gamecorner','vgc','ou','ubers','thetrainingroom','healthandfitness'];
 /*
 * exports.rooms = 'all'; //For joining all rooms
 * exports.rooms = 'official'; //For joining official rooms
