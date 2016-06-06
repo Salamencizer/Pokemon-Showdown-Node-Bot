@@ -38,9 +38,9 @@ exports.watchconfig = true;
 * Login Details
 */
 
-exports.nick = 'Rotom the Pokedex';
+exports.nick = '';
 
-exports.pass = 'ohkaydude!';
+exports.pass = '';
 
 exports.autoReloginDelay = 60 * 1000;
 
