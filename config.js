@@ -38,9 +38,9 @@ exports.watchconfig = true;
 * Login Details
 */
 
-exports.nick = '';
+exports.nick = 'Rotom the Pokedex';
 
-exports.pass = '';
+exports.pass = 'ohkaydude!';
 
 exports.autoReloginDelay = 60 * 1000;
 
@@ -64,7 +64,7 @@ exports.ignoreRooms = { //Rooms listed here will be ignored by CommandParser (bo
 	//roomid: true
 };
 
-exports.initCmds = ['|/avatar 120']; // Other commands (avatar, blockchallenges, etc)
+exports.initCmds = []; // Other commands (avatar, blockchallenges, etc)
 
 /*
 * Auth configuration
