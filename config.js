@@ -11,11 +11,11 @@
 *
 */
 
-exports.server = 'showdownsubserver-austin0602.c9users.io';
+exports.server = 'haze.psim.us';
 
-exports.port = 80;
+exports.port = 8080;
 
-exports.serverid = 'showdownsubserver-austin0602.c9users.io:80';
+exports.serverid = 'haze';
 
 exports.autoReconnectDelay = 10 * 1000;
 exports.connectionTimeout = 2 * 60 * 1000;
@@ -38,9 +38,9 @@ exports.watchconfig = true;
 * Login Details
 */
 
-exports.nick = '';
+exports.nick = 'Rotom the Pokedex';
 
-exports.pass = '';
+exports.pass = 'ohkaydude!';
 
 exports.autoReloginDelay = 60 * 1000;
 
